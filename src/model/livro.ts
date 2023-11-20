@@ -5,6 +5,7 @@ export class Livro {
     private _autores: Array<Autor> = new Array<Autor>
     private _anoPublicacao:number
     private _genero:string
+    private _estaEmprestado:boolean = false
     private readonly _id:number
     static countId:number = 0 
 
@@ -39,6 +40,12 @@ export class Livro {
     }
     get genero():string{
         return this._genero
+    }
+    set estaEmprestado(valor:boolean){
+        this._estaEmprestado = valor
+    }
+    get estaEmprestado():boolean{
+        return this._estaEmprestado
     }
     get id():number{
         return this._id
